@@ -1,35 +1,21 @@
+// explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
 // arrays
-let names = ["Luigi", "Mario", "Yoshi"];
+let ninjas: string[] = [];
 
-names.push("Toad");
-//names.push(3);
-//names[0] = 3;
+// union types
+let mixed: (string | number | boolean)[] = [];
+mixed.push("hello");
+mixed.push(24);
+mixed.push(true);
 
-let numbers = [10, 20, 30, 40];
-
-numbers.push(25);
-
-let mixed = ["Ken", 4, "Chun-li", 8, 9, true];
-mixed.push("Ryu");
-mixed.push(10);
-mixed[0] = 3;
+let uid: string | number;
 
 // objects
-let ninja = {
-  name: "Mario",
-  belt: "black",
-  age: 30,
-};
+let ninjaOne: object;
+ninjaOne = { name: "Yoshi", age: 30 };
 
-ninja.age = 40;
-ninja.name = "Ryu";
-//ninja.age = "30";
-//ninja.skills = ["fighting", "sneaking"];
-
-ninja = {
-  name: "Yoshi",
-  belt: "orange",
-  age: 40,
-};
-
-/* Podemos alterar os valores do nosso objeto mas não podemos alterar o tipo */
+let ninjaTwo: { name: string; age: number; beltColour: string };
