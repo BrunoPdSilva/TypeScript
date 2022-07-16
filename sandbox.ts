@@ -18,4 +18,6 @@ let uid: string | number;
 let ninjaOne: object;
 ninjaOne = { name: "Yoshi", age: 30 };
 
+ninjaOne = { ...ninjaOne, belt: "black" };
+
 let ninjaTwo: { name: string; age: number; beltColour: string };
