@@ -1,4 +1,19 @@
 import { Invoice } from "./classes/invoice.js";
+const me = {
+    name: "Bruno",
+    age: 23,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(`I spent ${amount}`);
+        return amount;
+    },
+};
+const greetPerson = (person) => {
+    console.log("hello", person.name);
+};
+greetPerson(me);
 const invOne = new Invoice("Bruno", "Livros", 200);
 const invTwo = new Invoice("Selma", "Shopee", 270);
 //Array que só recebe dados do tipo(class) Invoice
