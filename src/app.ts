@@ -29,31 +29,29 @@ form.addEventListener("submit", (e: Event) => {
   list.render(doc, type.value, "end");
 });
 
-// GENERICS
+// ENUMS
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
 
-//const addUID = <T extends object>(obj: T) => {
-const addUID = <T extends { name: string; age: number }>(obj: T) => {
-  let uid = Math.floor(Math.random() * 100);
-  return { ...obj, uid };
-};
-
-let docOne = addUID({ name: "Yoshi", age: 40 });
-
-//with interface:
 interface Resource<T> {
   uid: number;
-  resourceName: string;
+  resourceType: number;
   data: T;
 }
 
 const docThree: Resource<object> = {
   uid: 1,
-  resourceName: "Person",
-  data: { name: "Shaun" },
+  resourceType: ResourceType.BOOK,
+  data: { title: "name of the wind" },
 };
 
-const docFour: Resource<string[]> = {
-  uid: 2,
-  resourceName: "Shopping List",
-  data: ["test", "person"]
+const docFour: Resource<object> = {
+  uid: 10,
+  resourceType: ResourceType.PERSON,
+  data: { name: "yoshi" },
 };
